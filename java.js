@@ -234,23 +234,19 @@ let mostExpensive =({
     "Pearl Necklace": 4650
    }) 
 function expensive(arr){
-    let obj=Object.entries(arr)
-    let max=obj[0][1]
-    let str=""
-     for(var i=0; i<obj.length;i++){
-           if(obj[i][1]==max || obj[i][1]>max ){
-               max=obj[i][1]
-               str=obj[i][0]
-           }
-     }
-console.log( "The most expensive one is " + str)  
+    let obj=Object.values(arr)
+    let res=Math.max(...obj)
+    for (let jwel in arr) { 
+        if (arr.hasOwnProperty(jwel)) { 
+            if (arr[jwel] === res) 
+            console.log( "The most expensive one is " + jwel); 
+        } 
+    }
+  
 }
 expensive(mostExpensive)
 
 console.log("--------------Q 20-----------------")
 
-console.log("لم افهم السوال ")
-
-console.log("--------------End-----------------")
-
+console.log("I didnt understand the Q")
 
