@@ -247,3 +247,10 @@ console.log( "The most expensive one is " + str)
 }
 expensive(mostExpensive)
 
+console.log("--------------Q 20-----------------")
+
+console.log("لم افهم السوال ")
+
+console.log("--------------End-----------------")
+
+
