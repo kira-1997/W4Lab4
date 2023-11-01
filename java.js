@@ -95,7 +95,7 @@ function sum(num,num1){
    let result= num+num1
     console.log(result)
 }
-console.log(sum(numbe1,numbe2))
+sum(numbe1,numbe2)
 
 console.log("--------------Q 8-----------------")
 
@@ -194,18 +194,22 @@ console.log("--------------Q 17-----------------")
 let animals = ["dog", "cat", "bat", "cock", "cow", "pig",
 "fox", "ant", "bird", "lion", "wolf", "deer", "bear",
 "frog", "hen", "mole", "duck", "goat"]
-let animal="cockdogwdufrbir"
+let animal="cockdogwdufrbir";
 function countAnimals(str){
-    let counter=0;
+    let counter=0
+    let words=0
     for(var i=0; i<animals.length;i++){
-        for(var j=0;j<animals[i].length;j++){
-            for(var k=0;k<str.length;k++){
-             if(animals[i][j].includes(str.charAt(k))){
-                  
-               }
-    }}
-    }
-console.log(counter)}
+        for(var k=0;k<animals[i].length;k++){
+            if(animal.includes(animals[i][k])){
+                 counter++
+            }
+        }
+        if(counter==animals[i].length){
+            words= words+1
+         }  
+         counter=0
+     }
+console.log(words)}
 countAnimals(animal)
 
 console.log("--------------Q 18-----------------")
@@ -230,9 +234,16 @@ let mostExpensive =({
     "Pearl Necklace": 4650
    }) 
 function expensive(arr){
-    let obj=Object.values(arr)
-    let res=Math.max(...obj)
-console.log( "The most expensive one " + res1)  
+    let obj=Object.entries(arr)
+    let max=obj[0][1]
+    let str=""
+     for(var i=0; i<obj.length;i++){
+           if(obj[i][1]==max || obj[i][1]>max ){
+               max=obj[i][1]
+               str=obj[i][0]
+           }
+     }
+console.log( "The most expensive one is " + str)  
 }
 expensive(mostExpensive)
 
